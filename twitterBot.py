@@ -38,10 +38,10 @@ csv_f = csv.reader(f)
 
 for row in csv_f:
     #each row in csv is formatted as: [collection, itemID, imageID, name, date]
-    itexX = Item(row[0], row[1], row[2], row[3], row[4], row[5])
+    itemX = Item(row[0], row[1], row[2], row[3], row[4], row[5])
     allItems.append(itemX)
 
-ifile.close()
+f.close()
 
 ################## Write Tweet ######################
 
@@ -85,17 +85,3 @@ print status
 
 #Upload the image to Twitter along with the metadata
 api.update_with_media('image.gif',status=status)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
